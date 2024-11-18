@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Cars {
     private String carModel;
@@ -30,6 +31,16 @@ public class Cars {
         
         Double AvgCarPrice = (c.carPrice + c1.carPrice + c2.carPrice)/3;
         System.out.println("\nAverage Car Price: RM" + AvgCarPrice);
-
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Price of the first car:");
+        Double firstCarPrice = scanner.nextDouble();
+        System.out.println("Price of the second car:");
+        Double secondCarPrice = scanner.nextDouble();
+        System.out.println("Price of the third car:");
+        Double thirdCarPrice = scanner.nextDouble();
+        
+        Double AvgCarPrices = (firstCarPrice+secondCarPrice+thirdCarPrice)/3;
+        System.out.println("The average of car prices: " + AvgCarPrices);
     }
 }
