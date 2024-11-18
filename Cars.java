@@ -11,7 +11,7 @@ public class Cars {
     }
 
     public void displayCars() {
-        System.out.println("Cars Details:");
+        System.out.println("\nCars Details:");
         System.out.println("Model: " + carModel);
         System.out.println("Manufacture Year: " + manufactureYear);
         System.out.println("Price: RM" + carPrice);
@@ -29,7 +29,7 @@ public class Cars {
         c2.displayCars();
         
         Double AvgCarPrice = (c.carPrice + c1.carPrice + c2.carPrice)/3;
-        System.out.println("Average Car Price: RM" + AvgCarPrice);
+        System.out.println("\nAverage Car Price: RM" + AvgCarPrice);
 
     }
 }
