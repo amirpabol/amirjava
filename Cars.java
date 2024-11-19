@@ -2,28 +2,37 @@ import java.util.Scanner;
 
 public class Cars {
     private String carModel;
-    private int manufactureYear;
+    private int carMFGYR;
     private Double carPrice;
 
-    private Cars(String carModel, int manufactureYear, Double carPrice) {
-        this.carModel = carModel;
-        this.manufactureYear = manufactureYear;
-        this.carPrice = carPrice;
+
+    public Cars(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Model of the car:");
+        this.carModel = scanner.nextLine();
+        System.out.println("Manufacture year of the car:");
+        this.carMFGYR = scanner.nextInt();
+        System.out.println("Price of the car:");
+        this.carPrice = scanner.nextDouble();
     }
 
     public void displayCars() {
         System.out.println("\nCars Details:");
         System.out.println("Model: " + carModel);
-        System.out.println("Manufacture Year: " + manufactureYear);
+        System.out.println("Manufacture Year: " + carMFGYR);
         System.out.println("Price: RM" + carPrice);
     }
 
 
 
     public static void main(String[] args) {
-        Cars c = new Cars("Toyota Vios", 2020, 123000.01);
-        Cars c1 = new Cars("Toyota Camry", 2020, 126000.01);
-        Cars c2 = new Cars("Toyota Altis", 2019, 130000.01);
+
+
+        Cars c = new Cars();
+        Cars c1 = new Cars();
+        Cars c2 = new Cars();
 
         c.displayCars();
         c1.displayCars();
@@ -31,16 +40,5 @@ public class Cars {
         
         Double AvgCarPrice = (c.carPrice + c1.carPrice + c2.carPrice)/3;
         System.out.println("\nAverage Car Price: RM" + AvgCarPrice);
-        
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Price of the first car:");
-        Double firstCarPrice = scanner.nextDouble();
-        System.out.println("Price of the second car:");
-        Double secondCarPrice = scanner.nextDouble();
-        System.out.println("Price of the third car:");
-        Double thirdCarPrice = scanner.nextDouble();
-        
-        Double AvgCarPrices = (firstCarPrice+secondCarPrice+thirdCarPrice)/3;
-        System.out.println("The average of car prices: " + AvgCarPrices);
     }
 }
