@@ -37,6 +37,6 @@ public class Cars {
         c2.displayCars();
         
         Double AvgCarPrice = (c.carPrice + c1.carPrice + c2.carPrice)/3;
-        System.out.println("\nAverage Car Price: RM" + AvgCarPrice);
+        System.out.println("\nAverage Car Price: RM" + String.format("%.2f", AvgCarPrice));
     }
 }
