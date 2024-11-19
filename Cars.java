@@ -25,8 +25,6 @@ public class Cars {
         System.out.println("Price: RM" + carPrice);
     }
 
-
-
     public static void main(String[] args) {
 
 
