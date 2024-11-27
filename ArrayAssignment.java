@@ -31,7 +31,7 @@ public class ArrayAssignment {
                     System.out.println("Model: " + a.carModels[i][j] + ", Price: RM " + a.carPrices[i][j]);
                 }
     
+            }
         }
-        }
-}
+    }
 }
